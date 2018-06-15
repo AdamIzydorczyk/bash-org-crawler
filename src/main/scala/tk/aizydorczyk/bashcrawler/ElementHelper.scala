@@ -10,7 +10,7 @@ private[bashcrawler] object ElementHelper {
     val bar = "bar"
     val quote = "quote"
 
-    def fetchId(): Long = element.getElementsByClass(quoteIdTag).first().text().substring(1).toLong
+    def fetchId(): Long = element.getElementsByClass(quoteIdTag).first().text().take(1).toLong
 
     def fetchPoints(): Long = element.getElementsByClass(points).first().text().toLong
 
